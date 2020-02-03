@@ -1,6 +1,5 @@
 # Everything needed in production
 
-Werkzeug
 SQLAlchemy==1.1.9
 Flask_Caching
 Flask_SQLAlchemy==2.2
@@ -12,7 +11,7 @@ Flask
 PyJWT
 Flask-JWT-Extended
 unicode_slugify
-psycopg2
+psycopg2-binary
 Flask-Migrate
 gunicorn
 Flask-Cors
