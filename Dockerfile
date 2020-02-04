@@ -6,7 +6,6 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-#ADD conduit/re requirements.txt /app
 COPY requirements/prod.txt /app/requirements.txt
 
 RUN pip install --no-cache-dir -r /app/requirements.txt

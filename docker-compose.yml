@@ -2,6 +2,7 @@ version: '3.3'
 
 services:
   backend:
+    image: ae86jack/flask-realworld-example-app
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,7 +12,7 @@ services:
     environment:
       FLASK_DEBUG: "false"
       DATABASE_URL: postgresql://postgres:pwd@db:5432/conduit
-      CONDUIT_SECRET: day4day4day4day4
+      CONDUIT_SECRET: changethis
     labels:
       traefik.enable: "true"
       traefik.frontend.rule: PathPrefix:/api,/swagger,/swagger-ui
@@ -45,8 +46,9 @@ services:
         target: 5050
 
   frontend:
+    image: ae86jack/vue-realworld-example-app
     build:
-      context: ../vue-realworld-example-app   # 请设置为你的vue工程的实际路径
+      context: ../vue-realworld-example-app   # Please set as the actual path of your vue project
     labels:
       traefik.enable: "true"
       traefik.frontend.rule: PathPrefix:/
@@ -66,7 +68,5 @@ services:
         target: 80
       - published: 8090
         target: 8080
-      - published: 443
-        target: 443
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:rw
