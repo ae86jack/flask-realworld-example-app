@@ -1,6 +1,6 @@
 ### 项目简介
 
-把[flask-realworld-example-app](https://github.com/gothinkster/flask-realworld-example-app)整个服务进行docker化,
+把[flask-realworld-example-app](https://github.com/gothinkster/flask-realworld-example-app)整个服务进行docker化
 
 ### 项目启动
 
