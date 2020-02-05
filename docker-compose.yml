@@ -10,7 +10,7 @@ services:
     depends_on:
       - db
     environment:
-      FLASK_DEBUG: "false"
+      FLASK_DEBUG: 0
       DATABASE_URL: postgresql://postgres:pwd@db:5432/conduit
       CONDUIT_SECRET: changethis
     labels:
